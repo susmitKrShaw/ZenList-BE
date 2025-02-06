@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const { z, any } = require('zod');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { JWT_USER_SECRET, MONGO_URL } = require('./config');
 const { UserModel, TodosModel } = require('./db');
