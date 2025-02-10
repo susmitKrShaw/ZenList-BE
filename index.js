@@ -157,10 +157,6 @@ app.delete("/deletetodo", userAuthMiddleware, async (req,res)=>{
     })
 });
 
-app.delete("/signout", userAuthMiddleware, async (req,res) => {
-    localStorage.removeItem("token");
-})
-
 async function Server() {
     try {
         await mongoose.connect(MONGO_URL);
